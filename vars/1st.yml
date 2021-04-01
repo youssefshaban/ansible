@@ -1,0 +1,10 @@
+---
+app_user: "youssefshaban"
+http_host: "1st"
+http_conf: "1st.conf"
+http_port: "80"
+disable_default: true
+
+
+http_host2: "2nd"
+http_conf2: "2nd.conf"
