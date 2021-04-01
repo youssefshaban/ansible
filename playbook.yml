@@ -8,12 +8,15 @@
     - vars/1st.yml
 
   tasks:
-    - name: Install prerequisites
-      apt: name={{ item }} update_cache=yes state=latest force_apt_get=yes
-      loop: [ 'aptitude' ]
+    - name: Install firewall
+      ansible.builtin.package:
+          name: firewalld 
+          state: present
 
     - name: Install Apache
-      apt: name=apache2 update_cache=yes state=latest
+      ansible.builtin.package:
+          name: apache2 
+          state: present
 
     - name: Create document root
       file:
